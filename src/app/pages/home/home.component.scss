@@ -1,0 +1,39 @@
+//Imports
+@import "../../styles/_helpers";
+
+//Toggle theme and language box
+.toggleBlock {
+  @include displayFlex(row wrap, end, end);
+  margin-top: 25px;
+}
+
+//Header box
+.header-home{
+  @include displayFlex(row wrap, center, center);
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-box {
+    @include displayFlex(column wrap, center, center);
+    img {
+      max-width: 540px;
+      margin: 0 0 50px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo-box {
+    @include displayFlex(column wrap, center, center);
+    padding: 0 25px 0 0;
+    @media screen and (max-width: 992px) {
+      img {
+        max-width: 230px;
+      }
+    }
+  }
+}
+
+
+

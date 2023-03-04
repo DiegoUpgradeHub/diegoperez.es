@@ -1,0 +1,20 @@
+//Imports
+@import "../../styles/_helpers";
+
+//Toggle theme and language box
+.toggleBox {
+  @include displayFlex(row wrap, center, center);
+  .toggleLanguages {
+    @include displayFlex(row wrap, center, center);
+    margin: 0 10px;
+  }
+}
+
+.languageFlag {
+  width: 30px;
+  margin: 2px;
+}
+
+.languageFlag:hover {
+  width: 35px;
+}

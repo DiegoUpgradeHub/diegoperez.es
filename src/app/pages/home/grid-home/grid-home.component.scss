@@ -1,0 +1,29 @@
+@import "../../../styles/_helpers";
+@import "../../../styles/_colors";
+
+//grid
+.grid-home-box {
+  margin: 25px 0;
+}
+
+.home-card {
+  @include displayFlex(column wrap, center, center);
+  height: 200px;
+  margin: 3px;
+  border-radius: 1rem;
+  background-image: url('../../../../assets/seamless-pattern-02-primary.svg');
+}
+//Cambiar e l color del patrón cuando el modo oscuro está activado.
+.dark-mode {
+  background-image: url('../../../../assets/seamless-pattern-02-secondary.svg');
+}
+
+.home-card:hover {
+  box-shadow: 0px 0px 35px -5px $primary;
+}
+
+@media screen and (max-width: 575px) {
+  .home-card {
+    height: 100px;
+  }
+}

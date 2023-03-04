@@ -1,0 +1,16 @@
+//Imports
+@import "../../../styles/_helpers";
+
+//Form box
+.contactMeForm{
+  @include dark();
+  padding: 10px 5px;
+  border-radius: 1rem;
+}
+.contactMeForm:hover {
+  box-shadow: 0px 0px 35px -5px #000000;
+}
+
+.form-input-contactMe {
+  margin-top: 5px;
+}

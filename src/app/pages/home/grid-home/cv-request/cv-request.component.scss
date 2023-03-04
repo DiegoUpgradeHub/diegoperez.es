@@ -1,0 +1,32 @@
+// @import '_colors'
+@import '../../../../styles/colors';
+@import '../../../../styles/helpers';
+
+.btn-grid {
+  @include light();
+  width: 90%;
+  height: 60px;
+}
+
+.dark-mode {
+  @include dark();
+}
+
+img {
+  margin: 5px;
+}
+
+.portfolio-modal-box {
+  @include dark();
+}
+
+.portfolio-body-box {
+  @include displayFlex(row wrap, center, center)
+}
+
+.buttons {
+  margin-bottom: 10px;
+  button {
+    margin: 5px;
+  }
+}

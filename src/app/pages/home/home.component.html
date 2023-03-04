@@ -1,0 +1,38 @@
+<app-toggle-theme-language class="toggleBlock"></app-toggle-theme-language>
+<div class="container header-home">
+  <div class="row header-home">
+    <div class="col-sm-12 col-md-4 col-lg-6 logo-box" >
+      <!-- Versión del logo para el modo claro -->
+      <img
+      src="../../../assets/Isologotipo.primary.DP.svg" alt="isologotipo DP" style="width: 300px;"
+      (click)="showContactMe()"
+      *ngIf="!this.darkTheme"
+      >
+      <!-- Versión del logo para el modo oscuro -->
+      <img
+      src="../../../assets/Isologotipo.secondary.DP.svg" alt="isologotipo DP" style="width: 300px;"
+      (click)="showContactMe()"
+      *ngIf="this.darkTheme"
+      >
+
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-6 d-flex flex-column align-items-center">
+      <div  [hidden]="showContactMeForm">
+        <p class="text-center">Marketing specialist,<br>
+        senior graphic designer &<br>
+        junior full stack developer.</p>
+        <button
+          class="col-12" style="min-width: 300px; text-transform: uppercase; letter-spacing: 9px;"
+          type="button" class="btn btn-warning btn-lg contact-me-button"
+          (click)="showContactMe()"
+        >
+          Contact info
+        </button>
+      </div>
+      <div *ngIf="showContactMeForm">
+        <app-contact-form></app-contact-form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-grid-home></app-grid-home>
