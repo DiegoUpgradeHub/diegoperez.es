@@ -8,18 +8,18 @@
   height: 60px;
 }
 
-.dark-mode {
-  @include dark();
-}
-
 img {
   margin: 5px;
 }
 
 .portfolio-modal-box {
-  @include dark();
+  @include light();
 }
 
 .portfolio-body-box {
   @include displayFlex(row wrap, center, center)
+}
+
+.dark-mode {
+  @include dark();
 }

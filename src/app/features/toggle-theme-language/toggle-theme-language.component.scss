@@ -10,11 +10,33 @@
   }
 }
 
+
+//Color modification for Theme Switcher
+.toggleThemeInput:focus {
+  border-color: #4d4d4d !important;
+  box-shadow: 0 0 0 0 #4d4d4d !important;
+}
+.toggleThemeInput:checked {
+  border-color: #4d4d4d !important;
+  background-color: #4d4d4d !important;
+}
+.toggleThemeInput:active {
+  background-color: #4d4d4d !important;
+  border-color: #4d4d4d !important;
+}
+.toggleThemeInput:focus:not(:checked) {
+  border-color: #4d4d4d !important;
+}
+.toggleThemeInput-green:not(:disabled):active {
+  background-color: #4d4d4d !important;
+  border-color: #4d4d4d !important;
+}
+
+//Language toggle styles
 .languageFlag {
   width: 30px;
   margin: 2px;
 }
-
 .languageFlag:hover {
   width: 35px;
 }

@@ -20,6 +20,7 @@ export class ToggleThemeLanguageComponent {
   darkThemeToggle() {
     let homeCard = document.getElementsByClassName("home-card");
     let buttonGrid = document.getElementsByClassName("btn-grid");
+    let modalBox = document.getElementsByClassName("portfolio-modal-box");
 
     //Switcher del estado
     this.homeComponent.darkTheme = !this.homeComponent.darkTheme;
@@ -32,7 +33,10 @@ export class ToggleThemeLanguageComponent {
         homeCard[i].classList.add("dark-mode");
       }
       for(var i = 0; i < homeCard.length; i++) {
-        homeCard[i].classList.add("dark-mode");
+        buttonGrid[i].classList.add("dark-mode");
+      }
+      for(var i = 0; i < homeCard.length; i++) {
+        modalBox[i].classList.add("dark-mode");
       }
     } else {
       document.body.classList.remove("dark-mode");
@@ -40,7 +44,10 @@ export class ToggleThemeLanguageComponent {
         homeCard[i].classList.remove("dark-mode");
       }
       for(var i = 0; i < homeCard.length; i++) {
-        homeCard[i].classList.remove("dark-mode");
+        buttonGrid[i].classList.remove("dark-mode");
+      }
+      for(var i = 0; i < homeCard.length; i++) {
+        modalBox[i].classList.remove("dark-mode");
       }
     }
   }

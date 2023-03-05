@@ -8,16 +8,12 @@
   height: 60px;
 }
 
-.dark-mode {
-  @include dark();
-}
-
 img {
   margin: 5px;
 }
 
 .portfolio-modal-box {
-  @include dark();
+  @include light();
 }
 
 .portfolio-body-box {
@@ -29,4 +25,8 @@ img {
   button {
     margin: 5px;
   }
+}
+
+.dark-mode {
+  @include dark();
 }
