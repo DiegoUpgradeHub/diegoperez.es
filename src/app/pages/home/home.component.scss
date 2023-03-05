@@ -2,9 +2,29 @@
 @import "../../styles/_helpers";
 
 //Toggle theme and language box
-.toggleBlock {
-  @include displayFlex(row wrap, end, end);
-  margin-top: 25px;
+//Phone version
+@media screen and (max-width: 768px) {
+  .toggleBlockPhone {
+    @include displayFlex(column wrap, center, center);
+    margin-bottom: 25px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .toggleBlockPhone {
+    display: none;
+  }
+}
+//Desktop version
+@media screen and (max-width: 768px) {
+  .toggleBlockDesktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .toggleBlockDesktop {
+    @include displayFlex(row wrap, end, end);
+    margin-top: 25px;
+  }
 }
 
 //Header box
@@ -19,7 +39,8 @@
     @include displayFlex(column wrap, center, center);
     img {
       max-width: 540px;
-      margin: 0 0 50px;
+      margin: 25px;
+      // margin: 0 0 50px;
     }
   }
 }
