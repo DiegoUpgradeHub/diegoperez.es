@@ -18,13 +18,13 @@
       >
 
     </div>
-    <div class="col-sm-12 col-md-8 col-lg-6 d-flex flex-column align-items-center">
-      <div  [hidden]="showContactMeForm">
+    <div class="col-sm-12 col-md-8 col-lg-6">
+      <div *ngIf="!showContactMeForm" class=" d-flex flex-column align-items-center">
         <p class="text-center">Marketing specialist,<br>
         senior graphic designer &<br>
         junior full stack developer.</p>
+        <div class="divider-line"></div>
         <button
-          class="col-12" style="min-width: 300px; text-transform: uppercase; letter-spacing: 9px;"
           type="button" class="btn btn-warning btn-lg contact-me-button"
           (click)="showContactMe()"
         >
