@@ -12,11 +12,11 @@ export class UserAreaModalComponent {
     public router: Router,
   ) { }
 
-  logInPage() {
-    this.router.navigate(['log-in']);
+  signInPage() {
+    this.router.navigate(['sign-in']);
   }
 
-  registerPage() {
+  signUpPage() {
     this.router.navigate(['sign-up']);
   }
 

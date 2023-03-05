@@ -1,18 +1,19 @@
 <div class="signup-page">
-  <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
-      <h3>Please sign up</h3>
-      <div>
+  <form class="form-signup" [formGroup]="signupForm" (ngSubmit)="registerUser()">
+      <h3>Sign up</h3>
+      <div class="form-input">
           <label>Name</label>
           <input type="text" class="form-control" formControlName="name" placeholder="Enter name" required>
       </div>
-      <div>
+      <div class="form-input">
           <label>Email address</label>
           <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
       </div>
-      <div>
+      <div class="form-input">
           <label>Password</label>
           <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
       </div>
       <button type="submit" class="btn btn-success">Sign up</button>
+      <a class="dropdown-item" href="/sign-in">Already an account? Sign in</a>
   </form>
 </div>

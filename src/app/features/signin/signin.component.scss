@@ -1,9 +1,13 @@
 .signin-page {
-  max-width: 600px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  margin: 0 auto;
+  margin: 50px 0;
+}
+
+.form-signin {
+  width: 500px;
+}
+
+.form-input {
+  width: 100%;
 }
 
 .btn-success {
