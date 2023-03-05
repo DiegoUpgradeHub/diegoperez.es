@@ -2,8 +2,21 @@
   margin: 50px 0;
 }
 
-.form-signup {
-  width: 500px;
+//Responsive design
+@media screen and (min-width: 550px) {
+  .form-signup {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .form-signup {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .form-signup {
+    width: 100%;
+  }
 }
 
 .form-input {
