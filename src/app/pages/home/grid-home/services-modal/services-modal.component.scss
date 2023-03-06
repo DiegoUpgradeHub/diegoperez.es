@@ -20,10 +20,6 @@
   padding: 0.2rem;
 }
 
-img {
-  margin: 5px;
-}
-
 .portfolio-modal-box {
   @include light();
 }
@@ -34,4 +30,49 @@ img {
 
 .dark-mode {
   @include dark();
+}
+
+//Portfolio card styles
+@media screen and (max-width: 500px) {
+  .portfolio-card {
+    @include displayFlex(column wrap, center, center);
+    border-radius: 1rem;
+    margin: 5px;
+    .portfolio-card-image {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+    }
+    .portfolio-card-details {
+      @include displayFlex(column wrap, center, start);
+      margin: 5px;
+    }
+    .portfolio-card-button {
+      font-size: 0.7rem;
+      width: 80%;
+    }
+  }
+}
+@media screen and (min-width: 500px) {
+  .portfolio-card {
+    @include displayFlex(row wrap, center, center);
+    border-radius: 1rem;
+    margin: 5px;
+    .portfolio-card-image {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 1rem 0 0 1rem;
+    }
+    .portfolio-card-details {
+      @include displayFlex(column wrap, center, start);
+      max-width: 250px;
+      margin: 5px;
+    }
+    .portfolio-card-button {
+      font-size: 0.7rem;
+      width: 80%;
+    }
+  }
 }
