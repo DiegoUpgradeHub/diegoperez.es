@@ -57,9 +57,10 @@
 }
 
 //Responsive design for divider line
+
 @media screen and (max-width: 768px) {
   .divider-line {
-    width: 100%;
+    width: 150px;
     height: 1px;
     background: #4d4d4d;
     margin-bottom: 15px;
