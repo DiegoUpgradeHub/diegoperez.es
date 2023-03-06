@@ -8,8 +8,11 @@ const routes: Routes = [
       import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: `home`, redirectTo: ``, pathMatch: `full`
+  },
+  {
     path: `sign-in`, loadChildren: () =>
-      import('./features/signin/signin-routing.module').then(m => m.SigninRoutingModule)
+      import('./features/signin/signin.module').then(m => m.SigninModule)
   },
   {
     path: `user-area/:id`, loadChildren: () =>

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 
 export class AuthService {
+
 	//Definimos el endpoint y los headers para poder realizar la petición
   endpoint: string = 'http://localhost:4000/';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -22,7 +23,7 @@ export class AuthService {
   ) {
   }
 
-  // Sign-up
+// Sign-up
   signUp(user: User): Observable<any> {
     let api = `${this.endpoint}clients/register-user`;
     return this.http.post(api, user)
@@ -31,39 +32,44 @@ export class AuthService {
       )
   }
 
-  // Sign-in
+// Sign-in
   signIn(user: User) {
     return this.http.post<any>(`${this.endpoint}clients/signin`, user)
       .subscribe((res: any) => {
         localStorage.setItem('access_token', res.token)
-				//Seteamos el token
+        localStorage.setItem('_id', res._id)
+				//Seteamos el token y id del usuario en el localStorage
         this.getUserProfile(res._id).subscribe((res) => {
           this.currentUser = res;
-          this.router.navigate(['clients/user-area/' + res.msg._id]);
-				//Volvemos al user-profile una vez ejecutada la función
+          this.router.navigate(['/user-area/' + res.msg._id]);
+				//Redireccionamos al user-area una vez ejecutada la función
         })
       })
   }
 
+//Get token
   getToken() {
     return localStorage.getItem('access_token');
   }
-	//
+
+//Is logged in
   get isLoggedIn(): boolean {
     let authToken = localStorage.getItem('access_token');
     return (authToken !== null) ? true : false;
   }
 
+  //Logout
   doLogout() {
     let removeToken = localStorage.removeItem('access_token');
-    if (removeToken == null) {
-      this.router.navigate(['log-in']);
+    let removeId = localStorage.removeItem('_id');
+    if (removeToken == null && removeId == null) {
+      this.router.navigate(['home']);
     }
   }
 
-  // User Profile
-  getUserProfile(id: string): Observable<any> {
-    let api = `${this.endpoint}clients/user-profile/${id}`;
+  // User area
+  getUserProfile(id: any): Observable<any> {
+    let api = `${this.endpoint}clients/user-area/${id}`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((res: any) => {
         return res || {}
@@ -71,6 +77,12 @@ export class AuthService {
       catchError(this.handleError)
     )
   }
+
+    //ir al User area
+    userArea() {
+      let id = localStorage.getItem('_id');
+      this.router.navigate(['user-area/' + id]);
+    }
 
   // Error
   handleError(error: HttpErrorResponse) {

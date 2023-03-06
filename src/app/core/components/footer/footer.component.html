@@ -2,5 +2,10 @@
   class="d-flex-column justify-content-center text-center align-items-baseline mb-5"
 >
   <p>website developed by<br><a href="/" class="diegoText">diego pérez</a><br>check full code on <a href="https://github.com/DiegoUpgradeHub">GitHub</a></p>
-  <a href="/">Go back to home</a>
+  <div>
+    <a href="/">Go back to home </a>
+    <button class="btn btn-warning" *ngIf="this.authService.isLoggedIn" (click)="profile()"> | Mi cuenta </button>
+    <button class="btn btn-danger" *ngIf="this.authService.isLoggedIn" (click)="logout()"> | Cerrar sesión</button>
+
+  </div>
 </div>

@@ -1,3 +1,22 @@
-<p>user-area works!</p>
-<h1>Welcome to finteria account area</h1>
-<p>Here you'll find relevant information related to services, invoices, deadlines, reports, etc.</p>
+<div class="user-profile-page-box">
+  <p>user-area works!</p>
+  <h1>Welcome to finteria account area</h1>
+  <p>Here you'll find relevant information related to services, invoices, deadlines, reports, etc.</p>
+
+  <div class="card user-profile-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-4">
+        <img class="img-fluid rounded-start profile-image" src="https://cdn-icons-png.flaticon.com/512/2102/2102647.png" class="card-img-top" alt="profile-image">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h5 class="card-title">Perfil del usuario</h5>
+          <p class="card-text" [hidden]="this.currentUser.role !== 'admin'">Rol del usuario: {{this.currentUser?.role}}</p>
+          <p class="card-text"><small class="text-muted">Nombre: {{this.currentUser?.name}}</small></p>
+          <p class="card-text"><small class="text-muted">Apellidos: {{this.currentUser?.name}}</small></p>
+          <p class="card-text"><small class="text-muted">Correo: {{this.currentUser?.email}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

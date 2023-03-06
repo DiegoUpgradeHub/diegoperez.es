@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 
@@ -8,14 +8,14 @@ import { AuthService } from 'src/app/core/services/auth.service';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss']
 })
-export class SigninComponent implements OnInit {
+export class SigninComponent {
 
   signinForm: FormGroup;
 
-  constructor(
+  constructor (
     public fb: FormBuilder,
     public authService: AuthService,
-    public router: Router
+    public router: Router,
   ) {
     this.signinForm = this.fb.group({
       email: [''],
@@ -25,8 +25,9 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() { }
 
-  loginUser() {
-    this.authService.signIn(this.signinForm.value)
+  //Importante tener el ': void' porque sino dará error!
+  loginUser(): void {
+    this.authService.signIn(this.signinForm.value);
   }
 
 }

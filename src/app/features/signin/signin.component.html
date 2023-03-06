@@ -1,36 +1,16 @@
 <div class="signin-page">
-  <form class="form-signin" (ngSubmit)="loginUser()">
-      <h3>Sign in</h3>
-      <div class="form-input">
-          <label>Email</label>
-          <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
-          <div
-            [hidden]="signinForm.valid || signinForm.pristine"
-            class="alert alert-danger"
-          >
-            Email not identified.
-          </div>
-      </div>
-      <div class="form-input">
-          <label>Password</label>
-          <input type="password" class="form-control" formControlName="password" placeholder="Password">
-          <div
-            [hidden]="signinForm.valid || signinForm.pristine"
-            class="alert alert-danger"
-          >
-            Password incorrect.
-          </div>
-      </div>
-      <button type="submit" class="btn btn-success">
-        Sign in
-      </button>
-      <div
-        [hidden]="signinForm.valid || signinForm.pristine"
-        class="alert alert-danger"
-      >
-        Password incorrect.
-      </div>
-      <a class="dropdown-item" href="/sign-up">New around here? Sign up</a>
-      <a class="dropdown-item" href="#">Forgot password?</a>
+  <form class="form-signin" [formGroup]="signinForm" (ngSubmit)="loginUser()">
+    <h3>Sign in</h3>
+    <div class="form-input">
+      <label>Email</label>
+      <input type="text" class="form-control" formControlName="email" placeholder="Enter email" required>
+    </div>
+    <div class="form-input">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Enter password" required>
+    </div>
+    <button type="submit" class="btn btn-success">Sign in</button>
+    <a href="/home">Forgot your password?</a>
+    <a href="/sign-up">You don't have an account yet? Sign up now</a>
   </form>
 </div>
