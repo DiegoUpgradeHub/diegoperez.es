@@ -2,8 +2,10 @@
   <div class="form-check form-switch toggle toggleTheme">
     <input (click)="darkThemeToggle()" class="form-check-input toggleThemeInput" type="checkbox" role="switch" id="themeSwitch">
     <label class="form-check-label toggleThemeLabel" for="themeSwitch">
-      <i *ngIf="!this.homeComponent.darkTheme" class="bi bi-moon-fill"></i>
-      <i *ngIf="this.homeComponent.darkTheme" class="bi bi-brightness-high-fill"></i>
+      <!-- <i *ngIf="!this.darkTheme" class="bi bi-moon-fill"> Switch to dark mode</i>
+      <i *ngIf="this.darkTheme" class="bi bi-brightness-high-fill"> Switch to light mode</i> -->
+      <i *ngIf="!this.darkTheme" class="bi bi-moon-fill"> Dark mode</i>
+      <i *ngIf="this.darkTheme" class="bi bi-brightness-high-fill"> Light mode</i>
     </label>
   </div>
   <div class="toggleLanguages">

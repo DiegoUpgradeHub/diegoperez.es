@@ -10,6 +10,9 @@ import { SigninComponent } from './signin.component';
   declarations: [
     SigninComponent
   ],
+  exports: [
+    SigninComponent
+  ],
   imports: [
     CommonModule,
     SigninRoutingModule,

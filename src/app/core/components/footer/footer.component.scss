@@ -1,5 +1,13 @@
+//Importaciones
+@import "../../../styles/helpers";
+
 .diegoText {
   text-transform: uppercase;
   letter-spacing: 10px;
   font-size: 0.7rem;
+}
+
+.toggleBlock {
+  @include displayFlex(row wrap, center, center);
+  margin: 20px 0;
 }

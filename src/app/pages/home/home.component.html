@@ -1,22 +1,11 @@
-<!-- <app-toggle-theme-language class="toggleBlock"></app-toggle-theme-language> -->
-<app-toggle-theme-language class="toggleBlockDesktop"></app-toggle-theme-language>
-
 <div class="container header-home">
   <div class="row header-home">
     <div class="col-sm-12 col-md-4 col-lg-6 logo-box" >
-      <!-- Versión del logo para el modo claro -->
       <img
-      src="../../../assets/Isologotipo.primary.DP.svg" alt="isologotipo DP" style="width: 300px;"
+      src="../../../assets/Isologotipo.primary.DP.png" alt="isologotipo DP" style="width: 300px;"
       (click)="showContactMe()"
-      *ngIf="!this.darkTheme"
+      class="logo"
       >
-      <!-- Versión del logo para el modo oscuro -->
-      <img
-      src="../../../assets/Isologotipo.secondary.DP.svg" alt="isologotipo DP" style="width: 300px;"
-      (click)="showContactMe()"
-      *ngIf="this.darkTheme"
-      >
-
     </div>
     <div class="col-sm-12 col-md-8 col-lg-6">
       <div *ngIf="!showContactMeForm" class=" d-flex flex-column align-items-center">
@@ -38,4 +27,3 @@
   </div>
 </div>
 <app-grid-home></app-grid-home>
-<app-toggle-theme-language class="toggleBlockPhone"></app-toggle-theme-language>

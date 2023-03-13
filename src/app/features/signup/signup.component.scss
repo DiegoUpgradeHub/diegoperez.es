@@ -1,3 +1,6 @@
+//Imports
+@import "../../styles/colors";
+
 .signup-page {
   margin: 50px 0;
 }
@@ -26,4 +29,12 @@
 .btn-success {
   margin-top: 20px;
   width: 100%;
+}
+
+.bottom-btn {
+  margin-top: 5px;
+  width: 100%;
+}
+.bottom-btn:hover {
+  box-shadow: inset 0px 0px 50px -30px $primary;
 }

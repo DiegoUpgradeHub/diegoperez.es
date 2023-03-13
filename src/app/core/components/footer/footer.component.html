@@ -1,11 +1,18 @@
 <div
   class="d-flex-column justify-content-center text-center align-items-baseline mb-5"
 >
-  <p>website developed by<br><a href="/" class="diegoText">diego pérez</a><br>check full code on <a href="https://github.com/DiegoUpgradeHub">GitHub</a></p>
-  <div>
-    <a href="/">Go back to home </a>
-    <button class="btn btn-warning" *ngIf="this.authService.isLoggedIn" (click)="profile()"> | Mi cuenta </button>
-    <button class="btn btn-danger" *ngIf="this.authService.isLoggedIn" (click)="logout()"> | Cerrar sesión</button>
-
+  <p>
+    website developed by
+    <br>
+    <a routerLink="/" class="diegoText">diego pérez</a>
+    <br>
+    check full &lt;code&gt; on
+    <a href="https://github.com/DiegoUpgradeHub">GitHub</a>
+  </p>
+  <!-- <div>
+    <button class="btn btn-sm btn-outline-secondary"  routerLink="/">Home</button>
+    <button class="btn btn-sm btn-outline-secondary mx-2" *ngIf="this.authService.isLoggedIn" (click)="profile()">My area</button>
+    <button class="btn btn-sm btn-outline-secondary" *ngIf="this.authService.isLoggedIn" (click)="logout()">Log out</button>
   </div>
+  <app-toggle-theme-language class="toggleBlock"></app-toggle-theme-language> -->
 </div>

@@ -1,8 +1,26 @@
+//Imports
+@import '../../styles/helpers';
+@import '../../styles/colors';
+
+.toggleBlockPhone {
+  @include displayFlex(column wrap, center, center);
+  margin-bottom: 25px;
+}
+
 .user-profile-page-box {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+}
+
+.availability-message {
+  @include displayFlex(column wrap, center, center);
+  width: 100%;
+  background: $tertiary;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 20px 5px;
 }
 
 

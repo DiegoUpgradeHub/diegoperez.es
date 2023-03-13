@@ -13,25 +13,23 @@ import { PortfolioGraphicComponent } from './grid-home/portfolio-graphic/portfol
 import { ServicesModalComponent } from './grid-home/services-modal/services-modal.component';
 import { UserAreaModalComponent } from './grid-home/user-area-modal/user-area-modal.component';
 
-import { ToggleThemeLanguageComponent } from 'src/app/features/toggle-theme-language/toggle-theme-language.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ContactFormComponent,
-    GridHomeComponent,
-    CvRequestComponent,
-    PortfolioDeveloperComponent,
-    PortfolioGraphicComponent,
-    ServicesModalComponent,
-    UserAreaModalComponent,
-    ToggleThemeLanguageComponent
-  ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ]
+    declarations: [
+        HomeComponent,
+        ContactFormComponent,
+        GridHomeComponent,
+        CvRequestComponent,
+        PortfolioDeveloperComponent,
+        PortfolioGraphicComponent,
+        ServicesModalComponent,
+        UserAreaModalComponent,
+    ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class HomeModule { }
