@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { emailPattern, compareEmail } from 'src/app/core/utils/email-validator';
+import { emailPattern, CompareEmail } from 'src/app/core/utils/email-validator';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +10,7 @@ import { emailPattern, compareEmail } from 'src/app/core/utils/email-validator';
 })
 export class ContactFormComponent {
   public contactMeForm!: FormGroup;
-  public nameFormControl!: FormControl;
+  public nameFormControl?: FormControl;
   public emailFormControl!: FormControl;
   public emailRepeatFormControl!: FormControl;
   public messageFormControl!: FormControl;
@@ -33,15 +33,15 @@ export class ContactFormComponent {
   private initForm() {
     //FormGroup
     this.contactMeForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.maxLength(20)]],
+      name: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.pattern(emailPattern)]],
-      emailRepeat: ['', [Validators.required, ]],
+      emailRepeat: ['', [Validators.required, Validators.pattern(emailPattern)]],
       message: ['', [Validators.required, Validators.maxLength(300)]],
       company: ['', [Validators.required, Validators.maxLength(20)]],
       terms: ['', Validators.required],
     },
     {
-      valitador: compareEmail('email', 'emailRepeat')
+      validator: CompareEmail('email', 'emailRepeat')
     });
 
     //FormControls
@@ -56,27 +56,33 @@ export class ContactFormComponent {
   onSubmit() {
     this.isSubmitted = true;
     console.log(this.contactMeForm);
-
     if (this.contactMeForm.valid) {
-      this.isLoading = true;
-
-      const message = {
-        name: this.nameFormControl.value,
-        email: this.emailFormControl.value,
-        company: this.companyFormControl.value,
-        message: this.messageFormControl.value
-      }
-      console.log(message);
-
-      // alert('Message sent' + JSON.stringify(this.contactMeForm.value, null, 4));
-      alert('Message sent' + this.nameFormControl.value + this.emailFormControl.value + this.companyFormControl.value + this.messageFormControl.value);
-
+      alert('Message sent successfully')
       setTimeout(()=> {
         window.location.reload();
-        // this.contactMeForm.reset();
-        // this.isLoading = false;
       }, 500);
     }
+
+    // if (this.contactMeForm.valid) {
+    //   this.isLoading = true;
+
+    //   const message = {
+    //     name: this.nameFormControl.value,
+    //     email: this.emailFormControl.value,
+    //     company: this.companyFormControl.value,
+    //     message: this.messageFormControl.value
+    //   }
+    //   console.log(message);
+
+    //   // alert('Message sent' + JSON.stringify(this.contactMeForm.value, null, 4));
+    //   alert('Message sent' + this.nameFormControl.value + this.emailFormControl.value + this.companyFormControl.value + this.messageFormControl.value);
+
+    //   setTimeout(()=> {
+    //     window.location.reload();
+    //     // this.contactMeForm.reset();
+    //     // this.isLoading = false;
+    //   }, 500);
+    // }
     // this.submitted = false;
   }
 

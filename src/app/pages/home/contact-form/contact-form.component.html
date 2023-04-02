@@ -15,6 +15,9 @@
             <p *ngIf="nameFormControl?.errors?.['maxlength']">
               Maximum 20 characters.
             </p>
+            <p *ngIf="nameFormControl?.errors?.['minlength']">
+              Minimum 3 characters.
+            </p>
           </div>
         </fieldset>
         <fieldset class="col-12 col-sm-8">
@@ -56,15 +59,12 @@
             <p *ngIf="emailRepeatFormControl?.errors?.['mustMatch']">
               Emails must match.
             </p>
-            <p *ngIf="emailRepeatFormControl?.errors?.['mustMatch']">
-              Las contraseñas no coinciden
-            </p>
           </div>
         </fieldset>
       </div>
       <fieldset class="col">
         <label for="message">Leave a message</label>
-        <textarea class="form-control" id="message" formControlName="message" rows="3" placeholder="Leave a message" required></textarea>
+        <textarea class="form-control" id="message" formControlName="message" rows="3" placeholder="Leave a message. Maximum 300 characters." required></textarea>
         <div class="text-danger" *ngIf="!messageFormControl?.valid && messageFormControl?.dirty || isSubmitted">
           <p *ngIf="messageFormControl?.errors?.['required']">
             This field is mandatory.
@@ -78,8 +78,6 @@
         <div class="col-6">
           <fieldset class="form-check">
             <input class="form-check-input" type="checkbox" id="termsCheck" formControlName="terms" required>
-
-
             <label class="form-check-label" for="termsCheck">
               Agree to terms and conditions
             </label>
@@ -96,7 +94,6 @@
             [disabled]="isLoading"
             class="btn btn-warning"
             style="width: 100%;"
-            id="liveToastBtn"
           >
             Enviar
           </button>
