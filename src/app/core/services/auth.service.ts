@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
 	//Definimos el endpoint y los headers para poder realizar la petición
-  endpoint: string = 'http://localhost:4000/';
+  endpoint: string = 'https://diegoperez-server.vercel.app/users';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   //Aquí almacenaremos el usuario
   currentUser = {};
@@ -25,7 +25,7 @@ export class AuthService {
 
 // Sign-up
   signUp(user: User): Observable<any> {
-    let api = `${this.endpoint}clients/register-user`;
+    let api = `${this.endpoint}/register-user`;
     return this.http.post(api, user)
       .pipe(
         catchError(this.handleError)
@@ -34,7 +34,7 @@ export class AuthService {
 
 // Sign-in
   signIn(user: User) {
-    return this.http.post<any>(`${this.endpoint}clients/signin`, user)
+    return this.http.post<any>(`${this.endpoint}/signin`, user)
       .subscribe((res: any) => {
         localStorage.setItem('access_token', res.token)
         localStorage.setItem('_id', res._id)
@@ -69,7 +69,7 @@ export class AuthService {
 
   // User area
   getUserProfile(id: any): Observable<any> {
-    let api = `${this.endpoint}clients/user-area/${id}`;
+    let api = `${this.endpoint}/user-area/${id}`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((res: any) => {
         return res || {}
