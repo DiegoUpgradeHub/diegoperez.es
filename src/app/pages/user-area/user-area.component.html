@@ -22,4 +22,12 @@
       </div>
     </div>
   </div>
+  <div class="messagesBox">
+    <div *ngFor="let message of messages;">
+      <small>Message from:</small>
+      <h1>{{message.name}}</h1>
+      <small>Message text:</small>
+      <p>{{message.message}}</p>
+    </div>
+  </div>
 </div>
