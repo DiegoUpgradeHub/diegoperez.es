@@ -79,3 +79,12 @@ p, h4 {
   }
 }
 
+a {
+  // @include dark();
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
