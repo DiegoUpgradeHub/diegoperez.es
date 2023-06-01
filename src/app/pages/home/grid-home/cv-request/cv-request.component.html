@@ -10,17 +10,49 @@
 <div class="modal fade portfolio-modal" id="cvRequestModal" tabindex="-1" aria-labelledby="cvRequestModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content portfolio-modal-box">
+
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="cvRequestModalLabel">Seems like you are interested...</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body portfolio-body-box">
-        <p>Share with me your email, and I'll share with you my CV.</p>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Email to receive the CV" aria-label="Email to receive the CV" aria-describedby="button-addon2">
-          <button class="btn btn-success" type="button" id="button-addon2" data-bs-dismiss="modal">Send</button>
-        </div>
+        <form class="form-signup" [formGroup]="cvRequestForm" (ngSubmit)="newCvRequest()">
+          <div class="form-input input-group row">
+            <fieldset class="form-fieldset formName my-1 text-left">
+              <label for="name">What's your name?</label>
+              <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" required>
+              <div class="text-danger" *ngIf="!nameFormControl?.valid && nameFormControl?.dirty">
+                <p *ngIf="nameFormControl?.errors?.['required']">
+                  This field is mandatory.
+                </p>
+                <p *ngIf="nameFormControl?.errors?.['maxlength']">
+                  Maximum 20 characters.
+                </p>
+                <p *ngIf="nameFormControl?.errors?.['minlength']">
+                  Minimum 3 characters.
+                </p>
+              </div>
+            </fieldset>
+            <fieldset class="form-fieldset formEmail my-1">
+              <label>Please place here a valid email</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="Enter email" aria-describedby="button-addon" required>
+              <div class="text-danger" *ngIf="!emailFormControl?.valid && emailFormControl?.dirty">
+                <p *ngIf="emailFormControl?.errors?.['required']">
+                  This field is mandatory.
+                </p>
+                <p *ngIf="emailFormControl?.errors?.['pattern']">
+                  You need to type a valid email.
+                </p>
+              </div>
+            </fieldset>
+            <fieldset class="form-fieldset my-1">
+              <button class="btn btn-success" type="submit" id="button-addon" data-bs-dismiss="modal">Send</button>
+            </fieldset>
+          </div>
+        </form>
       </div>
+
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <form
       class="contactMeForm needs-validate"
       novalidate
-      (ngSubmit)="onSubmit()" [formGroup]="contactMeForm"
+      (ngSubmit)="newContactMe()" [formGroup]="contactMeForm"
     >
       <!-- <h3>Contact me</h3> -->
       <div class="row">
@@ -33,7 +33,7 @@
           </div>
         </fieldset>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <fieldset class="col-12 col-sm-4">
           <label for="company">Company</label>
           <input type="text" class="form-control" id="company" formControlName="company" placeholder="Company">
@@ -61,7 +61,7 @@
             </p>
           </div>
         </fieldset>
-      </div>
+      </div> -->
       <fieldset class="col">
         <label for="message">Leave a message</label>
         <textarea class="form-control" id="message" formControlName="message" rows="3" placeholder="Leave a message. Maximum 300 characters." required></textarea>
@@ -95,7 +95,7 @@
             class="btn btn-warning"
             style="width: 100%;"
           >
-            Enviar
+            Send
           </button>
         </div>
       </div>

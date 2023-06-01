@@ -23,7 +23,6 @@
   margin: 20px 5px;
 }
 
-
 .btn-text {
   margin: 0px;
   font-family: Helvetica, sans-serif;
@@ -48,4 +47,17 @@ div.card-body {
 
 .profile-image {
   max-width: 100px;
+}
+
+.messagesBox {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.messageCard {
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 5px 0px;
 }

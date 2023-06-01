@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessagesService } from 'src/app/core/services/messages.service';
 import { emailPattern, CompareEmail } from 'src/app/core/utils/email-validator';
 
 @Component({
@@ -22,6 +23,7 @@ export class ContactFormComponent {
 
   constructor(
     private formBuilder: FormBuilder,
+    public messagesService: MessagesService,
     public router: Router,
 
   ){}
@@ -30,7 +32,7 @@ export class ContactFormComponent {
     this.initForm()
   }
 
-  private initForm() {
+  public initForm() {
     //FormGroup
     this.contactMeForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(3)]],
@@ -39,6 +41,7 @@ export class ContactFormComponent {
       message: ['', [Validators.required, Validators.maxLength(300)]],
       company: ['', [Validators.required, Validators.maxLength(20)]],
       terms: ['', Validators.required],
+      label: ['contactMe']
     },
     {
       validator: CompareEmail('email', 'emailRepeat')
@@ -53,15 +56,15 @@ export class ContactFormComponent {
     this.termsFormControl = this.contactMeForm.get('terms') as FormControl;
   }
 
-  onSubmit() {
-    this.isSubmitted = true;
-    console.log(this.contactMeForm);
-    if (this.contactMeForm.valid) {
-      alert('Message sent successfully')
-      setTimeout(()=> {
-        window.location.reload();
-      }, 500);
-    }
+  // onSubmit() {
+  //   this.isSubmitted = true;
+  //   console.log(this.contactMeForm);
+  //   if (this.contactMeForm.valid) {
+  //     alert('Message sent successfully')
+  //     setTimeout(()=> {
+  //       window.location.reload();
+  //     }, 500);
+  //   }
 
     // if (this.contactMeForm.valid) {
     //   this.isLoading = true;
@@ -84,6 +87,23 @@ export class ContactFormComponent {
     //   }, 500);
     // }
     // this.submitted = false;
+    newContactMe() {
+      this.messagesService.createMessage(this.contactMeForm.value).subscribe((res) => {
+          alert('Message sent successfully');
+          window.location.reload();
+      })
+    }
   }
 
-}
+  // onSubmit() {
+    //   this.isSubmitted = true;
+    //   console.log(this.contactMeForm);
+    //   if (this.contactMeForm.valid) {
+    //     alert('Message sent successfully')
+    //     setTimeout(()=> {
+    //       window.location.reload();
+    //     }, 500);
+    //   }
+
+
+

@@ -44,7 +44,7 @@ export class MessagesService {
     )
   };
 
-  //Editar un producto
+  //Editar un mensaje
   editMessage(message: Message ): Observable<any> {
     let id = message._id
     let api = `${this.endpoint}/edit/${id}`;
@@ -54,7 +54,7 @@ export class MessagesService {
     )
   };
 
-  //Eliminar un producto
+  //Eliminar un mensaje
   deleteMessage(message: Message): Observable<any> {
     let id = message._id
     let api = `${this.endpoint}/delete/${id}`;
