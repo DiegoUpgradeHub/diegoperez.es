@@ -5,6 +5,30 @@
   @include displayFlex(row wrap, center, center);
 }
 
+.desktopMenu {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .desktopMenu {
+    @include displayFlex(row wrap, center, center);
+    width: 100%;
+    margin: 15px 0;
+    background: white;
+    button {
+      border: none;
+      background: none;
+      margin: 0 5px;
+    }
+    .toggle-items {
+      margin: 0 5px;
+    }
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+
 .menu-box {
   width: 650px;
   @include displayFlex(row wrap, end, end);

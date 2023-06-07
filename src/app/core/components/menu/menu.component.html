@@ -1,4 +1,4 @@
-<div class="fixPosition fixed-top">
+<div class="fixPosition fixed-top mobil mobileMenu">
   <div class="menu-box">
     <div class="dropdown">
       <button class="btn btn-dark menu-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -13,4 +13,11 @@
       </ul>
     </div>
   </div>
+</div>
+<div class="desktopMenu fixed-top">
+  <button class="desktop-item"  routerLink="/">Home</button>
+  <button class="desktop-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">Log in</button>
+  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">My area</button>
+  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="logout()">Log out</button>
+  <app-toggle-theme-language class="desktop-item toggle-items"></app-toggle-theme-language>
 </div>

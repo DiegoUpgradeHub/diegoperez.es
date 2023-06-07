@@ -30,7 +30,7 @@
 //Header box
 .header-home{
   @include displayFlex(row wrap, center, center);
-  margin: 25px 0;
+  margin: 40px 0 25px 0;
   padding: 0;
 }
 
