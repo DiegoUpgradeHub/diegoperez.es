@@ -9,15 +9,15 @@
     </div>
     <div class="col-sm-12 col-md-8 col-lg-6">
       <div *ngIf="!showContactMeForm" class=" d-flex flex-column align-items-center">
-        <p class="text-center">Marketing specialist,<br>
-        senior graphic designer &<br>
-        junior full stack developer.</p>
+        <p class="text-center">{{'Marketing specialist,' | translate }}<br>
+        {{'senior graphic designer &' | translate}}<br>
+        {{'junior full stack developer.' | translate}}</p>
         <div class="divider-line"></div>
         <button
           type="button" class="btn btn-warning btn-lg contact-me-button"
           (click)="showContactMe()"
         >
-          Contact info
+          {{'Contact me' | translate}}
         </button>
       </div>
       <div *ngIf="showContactMeForm">

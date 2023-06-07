@@ -13,6 +13,7 @@ import { PortfolioGraphicComponent } from './grid-home/portfolio-graphic/portfol
 import { ServicesModalComponent } from './grid-home/services-modal/services-modal.component';
 import { UserAreaModalComponent } from './grid-home/user-area-modal/user-area-modal.component';
 
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { UserAreaModalComponent } from './grid-home/user-area-modal/user-area-mo
         CommonModule,
         HomeRoutingModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule
     ]
 })
 export class HomeModule { }

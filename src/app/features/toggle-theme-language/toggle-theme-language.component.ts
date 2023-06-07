@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-toggle-theme-language',
@@ -9,7 +11,14 @@ export class ToggleThemeLanguageComponent {
   //La varialble darkTheme está declarada en HomeComponent
   public darkTheme: boolean = false;
 
-  constructor() { }
+  constructor(
+    public translateService: TranslateService,
+    public appComponent: AppComponent
+  ) { }
+
+  ngOnInit(): void {
+    this.detectBrowserLanguage();
+  }
 
   //Función para cambiar el tema oscuro-light de la página
   darkThemeToggle() {
@@ -60,6 +69,25 @@ export class ToggleThemeLanguageComponent {
       for(var i = 0; i < signInUp.length; i++) {
         signInUp[i].classList.remove("dark-mode");
       }
+    }
+  }
+
+  setEnglish(){
+    this.appComponent.setAppLanguageEnglish();
+  }
+
+  setSpanish(){
+    this.appComponent.setAppLanguageSpanish();
+  }
+
+  setGerman(){
+    this.appComponent.setAppLanguageGerman();
+  }
+
+  detectBrowserLanguage(){
+    const browserLang = this.translateService.getBrowserLang();
+    if (browserLang === 'es') {
+      console.log('Tu navegador es español')
     }
   }
 

@@ -2,15 +2,13 @@
   <div class="form-check form-switch toggle toggleTheme">
     <input (click)="darkThemeToggle()" class="form-check-input toggleThemeInput" type="checkbox" role="switch" id="themeSwitch">
     <label class="form-check-label toggleThemeLabel" for="themeSwitch">
-      <!-- <i *ngIf="!this.darkTheme" class="bi bi-moon-fill"> Switch to dark mode</i>
-      <i *ngIf="this.darkTheme" class="bi bi-brightness-high-fill"> Switch to light mode</i> -->
       <i *ngIf="!this.darkTheme" class="bi bi-moon-fill"> Dark mode</i>
       <i *ngIf="this.darkTheme" class="bi bi-brightness-high-fill"> Light mode</i>
     </label>
   </div>
   <div class="toggleLanguages">
-    <img src="https://cdn-icons-png.flaticon.com/512/3054/3054075.png" alt="Spanish" class="languageFlag"/>
-    <img src="https://cdn-icons-png.flaticon.com/512/4009/4009124.png" alt="English" class="languageFlag"/>
-    <img src="https://cdn-icons-png.flaticon.com/512/3053/3053973.png" alt="German" class="languageFlag"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/3054/3054075.png" alt="Spanish" class="languageFlag" (click)="setSpanish()"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/4009/4009124.png" alt="English" class="languageFlag" (click)="setEnglish()"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/3053/3053973.png" alt="German" class="languageFlag" (click)="setGerman()"/>
   </div>
 </div>
