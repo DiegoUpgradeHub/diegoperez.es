@@ -1,9 +1,9 @@
 <!-- Button trigger modal -->
 <button type="button" class="modal-click btn btn-grid" data-bs-toggle="modal" data-bs-target="#cvRequestModal">
-  CV Request
+  {{"CV Request" | translate}}
 </button>
 <button type="button" class="btn btn-success grip-label-button" data-bs-toggle="modal" data-bs-target="#cvRequestModal">
-  Get it <i class="bi bi-clipboard-check-fill"></i>
+  {{"Get it" | translate}} <i class="bi bi-clipboard-check-fill"></i>
 </button>
 
 <!-- Modal -->
@@ -12,7 +12,7 @@
     <div class="modal-content portfolio-modal-box">
 
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="cvRequestModalLabel">Seems like you are interested...</h1>
+        <h1 class="modal-title fs-5" id="cvRequestModalLabel">{{"Seems like you are interested..." | translate}}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -20,22 +20,22 @@
         <form class="form-signup" [formGroup]="cvRequestForm" (ngSubmit)="newCvRequest()">
           <div class="form-input input-group row">
             <fieldset class="form-fieldset formName my-1 text-left">
-              <label for="name">What's your name?</label>
+              <label for="name">{{"What's your name?" | translate}}</label>
               <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" required>
               <div class="text-danger" *ngIf="!nameFormControl?.valid && nameFormControl?.dirty">
                 <p *ngIf="nameFormControl?.errors?.['required']">
-                  This field is mandatory.
+                  {{"This field is mandatory." | translate}}
                 </p>
                 <p *ngIf="nameFormControl?.errors?.['maxlength']">
-                  Maximum 20 characters.
+                  {{"Maximum 20 characters." | translate}}
                 </p>
                 <p *ngIf="nameFormControl?.errors?.['minlength']">
-                  Minimum 3 characters.
+                  {{"Minimum 3 characters." | translate}}
                 </p>
               </div>
             </fieldset>
             <fieldset class="form-fieldset formEmail my-1">
-              <label>Please place here a valid email</label>
+              <label>{{"Please place here a valid email" | translate}}</label>
               <input type="email" class="form-control" formControlName="email" placeholder="Enter email" aria-describedby="button-addon" required>
               <div class="text-danger" *ngIf="!emailFormControl?.valid && emailFormControl?.dirty">
                 <p *ngIf="emailFormControl?.errors?.['required']">
