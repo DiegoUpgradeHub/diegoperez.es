@@ -1,0 +1,20 @@
+{
+  "Marketing specialist,": "Marketing-Spezialist,",
+  "senior graphic designer &": "Senior-Grafikdesigner &",
+  "junior full stack developer.": "Junior-Full-Stack-Entwickler.",
+  "Contact me": "Kontaktiere mich",
+  "Developer": "Entwickler",
+  "Diego's Full Stack portfolio": "Diegos Full-Stack-Portfolio",
+  "Tic-Tac-Toe game": "Tic-Tac-Toe-Spiel",
+  "Tic-Tac-Toe game for 2 players. Developed on Angular using Bootstrap library.": "Tic-Tac-Toe-Spiel für 2 Spieler. Entwickelt mit Angular unter Verwendung der Bootstrap-Bibliothek.",
+  "Play a game now": "Jetzt spielen",
+  "Go to Github now": "Jetzt zu Github gehen",
+  "Countries API request": "Länder-API-Anfrage",
+  "Play a flag quiz or check detailed info about countries. Developed on React using Chakkra library and public API of restcountries.com.": "Spiele ein Flaggen-Quiz oder überprüfe detaillierte Informationen über Länder. Entwickelt mit React unter Verwendung der Chakra-Bibliothek und der öffentlichen API von restcountries.com.",
+  "Check deployed version": "Bereitgestellte Version überprüfen",
+  "Pizzeria menu, with clients-admin role users. Admins can do a full CRUD,": "Pizzeria-Menü mit Benutzern in den Rollen Kunde und Administrator. Administratoren können ein vollständiges CRUD durchführen,",
+  "clients can do orders. Developed on Angular using Bootstrap library and a local DB based on NodeJS.": "Kunden können Bestellungen aufgeben. Entwickelt mit Angular unter Verwendung der Bootstrap-Bibliothek und einer lokalen Datenbank basierend auf NodeJS.",
+  "Check client's role now": "Überprüfe jetzt die Benutzerrolle des Kunden",
+  "This current website": "Diese aktuelle Website",
+  "Personal website to show my portfolios and launch it as a platform to get jobs and collaborations. Currently working on the user area. Developed on Angular using Bootstrap library and backend with NodeJS and MongoDB. Everything deplyed on Vercel.": "Persönliche Website, um meine Portfolios zu zeigen und sie als Plattform für Jobs und Zusammenarbeit zu starten. Derzeit arbeite ich am Benutzerbereich. Entwickelt mit Angular unter Verwendung der Bootstrap-Bibliothek und eines Backends mit NodeJS und MongoDB. Alles wird auf Vercel bereitgestellt."
+}
