@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="modal-click btn btn-grid" data-bs-toggle="modal" data-bs-target="#servicesModal">
-  Services
+  {{ "Services" | translate }}
 </button>
 <button type="button" class="btn btn-warning grip-label-button" data-bs-toggle="modal" data-bs-target="#servicesModal">
   Solutions <i class="bi bi-briefcase"></i>
@@ -11,61 +11,49 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
     <div class="modal-content portfolio-modal-box">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="servicesModalLabel">Services offered</h1>
+        <h1 class="modal-title fs-5" id="servicesModalLabel">{{ "Services offered" | translate }}</h1>
         <button type="button" class="btn-close btn-warning" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body portfolio-body-box">
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Digital Marketing Strategies</h4>
-            <p>Drive your online business with effective digital strategies and personalized campaigns. Reach your target audience and increase your online presence.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{ "Digital Marketing Strategies" | translate }}</h4>
+            <p>{{ "Drive your online business with effective digital strategies and personalized campaigns. Reach your target audience and increase your online presence." | translate }}</p>
           </div>
         </div>
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Social Media Management</h4>
-            <p>Build a strong social media presence. Create engaging content, interact with your audience, and boost brand visibility and engagement.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{ "Social Media Management" | translate }}</h4>
+            <p>{{"Build a strong social media presence. Create engaging content, interact with your audience, and boost brand visibility and engagement." | translate }}</p>
           </div>
         </div>
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Brand Identity Design</h4>
-            <p>Create a unique and appealing brand image. Design logos, color palettes, and visual elements that reflect your brand's personality.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{ "Brand Identity Design" | translate }}</h4>
+            <p>{{"Create a unique and appealing brand image. Design logos, color palettes, and visual elements that reflect your brand's personality." | translate}}</p>
           </div>
         </div>
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Promotional Materials Design</h4>
-            <p>Stand out with impactful promotional materials. Design eye-catching brochures, posters, and banners to capture the attention of your customers.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{"Promotional Materials Design" | translate}}</h4>
+            <p>{{"Stand out with impactful promotional materials. Design eye-catching brochures, posters, and banners to capture the attention of your customers." | translate }}</p>
           </div>
         </div>
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Custom Website Development</h4>
-            <p>Create tailored websites. Modern design, intuitive development, and customized features to meet your business needs.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{"Custom Website Development" | translate }}</h4>
+            <p>{{"Create tailored websites. Modern design, intuitive development, and customized features to meet your business needs." | translate }}</p>
           </div>
         </div>
         <div class="portfolio-card">
-          <!-- <img class="portfolio-card-image" src="https://dummyimage.com/300.png/09f/fff" alt="image"> -->
           <div class="portfolio-card-details">
-            <h4>Website and Application Maintenance</h4>
-            <p>Keep your systems up and running. Update, troubleshoot, and improve the performance of your websites and applications.</p>
-            <!-- <button class="btn btn-warning portfolio-card-button">Full description</button> -->
+            <h4>{{"Website and Application Maintenance" | translate }}</h4>
+            <p>{{"Keep your systems up and running. Update, troubleshoot, and improve the performance of your websites and applications." | translate }}</p>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Close" | translate }}</button>
       </div>
     </div>
   </div>

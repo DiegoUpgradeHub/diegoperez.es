@@ -6,9 +6,9 @@
       </button>
       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
         <li><button class="dropdown-item"  routerLink="/">Home</button></li>
-        <li><button class="dropdown-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">Log in</button></li>
-        <li><button class="dropdown-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">My area</button></li>
-        <li><button class="dropdown-item" *ngIf="this.authService.isLoggedIn" (click)="logout()">Log out</button></li>
+        <li><button class="dropdown-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">{{"Log in" | translate }}</button></li>
+        <li><button class="dropdown-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">{{"My area" | translate }}</button></li>
+        <li><button class="dropdown-item" *ngIf="this.authService.isLoggedIn" (click)="logout()">{{"Log out"}}</button></li>
         <li><app-toggle-theme-language class="dropdown-item"></app-toggle-theme-language></li>
       </ul>
     </div>
@@ -16,8 +16,8 @@
 </div>
 <div class="desktopMenu fixed-top">
   <button class="desktop-item"  routerLink="/">Home</button>
-  <button class="desktop-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">Log in</button>
-  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">My area</button>
-  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="logout()">Log out</button>
+  <button class="desktop-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">{{"Log in" | translate }}</button>
+  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">{{"My area" | translate }}</button>
+  <button class="desktop-item" *ngIf="this.authService.isLoggedIn" (click)="logout()">{{"Log out"}}</button>
   <app-toggle-theme-language class="desktop-item toggle-items"></app-toggle-theme-language>
 </div>

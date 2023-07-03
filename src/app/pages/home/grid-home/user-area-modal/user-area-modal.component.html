@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="modal-click btn btn-grid" data-bs-toggle="modal" data-bs-target="#userAreaModal">
-  User area
+  {{"User area" | translate}}
 </button>
 <button type="button" class="btn btn-danger grip-label-button" data-bs-toggle="modal" data-bs-target="#userAreaModal">
   Personal area <i class="bi bi-universal-access-circle"></i>
@@ -11,20 +11,20 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content portfolio-modal-box">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="userAreaModalLabel">User area</h1>
+        <h1 class="modal-title fs-5" id="userAreaModalLabel">{{"User area" | translate}}</h1>
         <button type="button" class="btn-close btn-warning" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body portfolio-body-box">
-        <i>Either you have an account,</i>
-        <i>or you need to create one.</i>
-        <small>Choose wisely the right button.</small>
+        <i>{{"Either you have an account," | translate}}</i>
+        <i>{{"or you need to create one." | translate}}</i>
+        <small>{{"Choose wisely the right button." | translate}}</small>
       </div>
       <div class="buttons">
-        <button class="btn btn-success" data-bs-dismiss="modal" routerLink="/sign-in">Log in</button>
-        <button class="btn btn-light" data-bs-dismiss="modal" routerLink="/sign-up">Register</button>
+        <button class="btn btn-success" data-bs-dismiss="modal" routerLink="/sign-in">{{"Log in" | translate}}</button>
+        <button class="btn btn-light" data-bs-dismiss="modal" routerLink="/sign-up">{{"Register" | translate}}</button>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Close" | translate}}</button>
       </div>
     </div>
   </div>

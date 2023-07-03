@@ -39,15 +39,15 @@
               <input type="email" class="form-control" formControlName="email" placeholder="Enter email" aria-describedby="button-addon" required>
               <div class="text-danger" *ngIf="!emailFormControl?.valid && emailFormControl?.dirty">
                 <p *ngIf="emailFormControl?.errors?.['required']">
-                  This field is mandatory.
+                  {{"This field is mandatory." | translate}}
                 </p>
                 <p *ngIf="emailFormControl?.errors?.['pattern']">
-                  You need to type a valid email.
+                  {{"You need to type a valid email." | translate}}
                 </p>
               </div>
             </fieldset>
             <fieldset class="form-fieldset my-1">
-              <button class="btn btn-success" type="submit" id="button-addon" data-bs-dismiss="modal">Send</button>
+              <button class="btn btn-success" type="submit" id="button-addon" data-bs-dismiss="modal">{{"Send" | translate}}</button>
             </fieldset>
           </div>
         </form>

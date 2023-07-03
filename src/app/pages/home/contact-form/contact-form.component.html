@@ -6,86 +6,57 @@
       <!-- <h3>Contact me</h3> -->
       <div class="row">
         <fieldset class="col-12 col-sm-4">
-          <label for="name">Name</label>
+          <label for="name">{{"Name" | translate }}</label>
           <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" required>
           <div class="text-danger" *ngIf="!nameFormControl?.valid && nameFormControl?.dirty || isSubmitted">
             <p *ngIf="nameFormControl?.errors?.['required']">
-              This field is mandatory.
+              {{"This field is mandatory." | translate}}
             </p>
             <p *ngIf="nameFormControl?.errors?.['maxlength']">
-              Maximum 20 characters.
+              {{"Maximum 20 characters." | translate}}
             </p>
             <p *ngIf="nameFormControl?.errors?.['minlength']">
-              Minimum 3 characters.
+              {{"Minimum 3 characters." | translate}}
             </p>
           </div>
         </fieldset>
         <fieldset class="col-12 col-sm-8">
-          <label for="email">Email</label>
+          <label for="email">{{"Email" | translate }}</label>
           <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email" required>
           <div class="text-danger" *ngIf="!emailFormControl?.valid && emailFormControl?.dirty || isSubmitted">
             <p *ngIf="emailFormControl?.errors?.['required']">
-              This field is mandatory.
+              {{"This field is mandatory." | translate}}
             </p>
             <p *ngIf="emailFormControl?.errors?.['pattern']">
-              You need to type a valid email.
+              {{"You need to type a valid email." | translate}}
             </p>
           </div>
         </fieldset>
       </div>
-      <!-- <div class="row">
-        <fieldset class="col-12 col-sm-4">
-          <label for="company">Company</label>
-          <input type="text" class="form-control" id="company" formControlName="company" placeholder="Company">
-          <div class="text-danger" *ngIf="!companyFormControl?.valid && companyFormControl?.dirty || isSubmitted">
-            <p *ngIf="companyFormControl?.errors?.['required']">
-              This field is mandatory.
-            </p>
-            <p *ngIf="companyFormControl?.errors?.['maxlength']">
-              Maximum 20 characters.
-            </p>
-          </div>
-        </fieldset>
-        <fieldset class="col-12 col-sm-8">
-          <label for="emailRepeat">Check your email</label>
-          <input type="email" class="form-control" id="emailRepeat" formControlName="emailRepeat" placeholder="Check your email" required>
-          <div class="text-danger" *ngIf="!emailRepeatFormControl?.valid && emailRepeatFormControl?.dirty || isSubmitted">
-            <p *ngIf="emailRepeatFormControl?.errors?.['required']">
-              This field is mandatory.
-            </p>
-            <p *ngIf="emailRepeatFormControl?.errors?.['pattern']">
-              You need to type a valid email.
-            </p>
-            <p *ngIf="emailRepeatFormControl?.errors?.['mustMatch']">
-              Emails must match.
-            </p>
-          </div>
-        </fieldset>
-      </div> -->
       <fieldset class="col">
-        <label for="message">Leave a message</label>
+        <label for="message">{{"Leave a message" | translate }}</label>
         <textarea class="form-control" id="message" formControlName="message" rows="3" placeholder="Leave a message. Maximum 300 characters." required></textarea>
         <div class="text-danger" *ngIf="!messageFormControl?.valid && messageFormControl?.dirty || isSubmitted">
           <p *ngIf="messageFormControl?.errors?.['required']">
-            This field is mandatory.
+            {{"This field is mandatory." | translate}}
           </p>
           <p *ngIf="messageFormControl?.errors?.['maxlength']">
-            Maximum 300 characters.
+            {{"Maximum 300 characters." | translate}}
           </p>
         </div>
       </fieldset>
       <div class="row align-items-center col-12 form-input-contactMe">
         <div class="col-6">
           <fieldset class="form-check">
-            <input class="form-check-input" type="checkbox" id="termsCheck" formControlName="terms" required>
+            <!-- <input class="form-check-input" type="checkbox" id="termsCheck" formControlName="terms" required>
             <label class="form-check-label" for="termsCheck">
-              Agree to terms and conditions
+              {{"Agree to terms and conditions" | translate }}
             </label>
             <div class="text-danger" *ngIf="!termsFormControl?.valid && termsFormControl?.dirty || isSubmitted">
               <p *ngIf="termsFormControl?.errors?.['required']">
                 This field is mandatory.
               </p>
-            </div>
+            </div> -->
           </fieldset>
         </div>
         <div class="col-6">
@@ -95,7 +66,7 @@
             class="btn btn-warning"
             style="width: 100%;"
           >
-            Send
+            {{"Send" | translate }}
           </button>
         </div>
       </div>
