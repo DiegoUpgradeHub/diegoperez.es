@@ -41,6 +41,7 @@ p, h4 {
     @include displayFlex(column wrap, center, center);
     border-radius: 1rem;
     margin: 5px;
+    width: 300px;
     .portfolio-card-image {
       width: 100%;
       height: 150px;
@@ -48,12 +49,14 @@ p, h4 {
       border-radius: 1rem 1rem 0 0;
     }
     .portfolio-card-details {
-      @include displayFlex(column wrap, center, start);
+      @include displayFlex(column wrap, center, center);
+      width: 100%;
       margin: 5px;
     }
     .portfolio-card-button {
       font-size: 0.7rem;
-      width: 40%;
+      width: 300px;
+      margin: 5 5;
     }
   }
 }
@@ -70,10 +73,11 @@ p, h4 {
     }
     .portfolio-card-details {
       @include displayFlex(column wrap, center, start);
-      max-width: 350px;
+      width: 350px;
       margin: 5px;
     }
     .portfolio-card-button {
+      width: 300px;
       font-size: 0.7rem;
     }
   }
