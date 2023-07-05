@@ -4,7 +4,7 @@
       <button class="btn btn-dark menu-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-list"></i>
       </button>
-      <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <ul class="phoneDropDown dropdown-menu dropdown-menu-dark dropdown-menu-end">
         <li><button class="dropdown-item"  routerLink="/">Home</button></li>
         <li><button class="dropdown-item" *ngIf="!this.authService.isLoggedIn" routerLink="/sign-in">{{"Log in" | translate }}</button></li>
         <li><button class="dropdown-item" *ngIf="this.authService.isLoggedIn" (click)="profile()">{{"My area" | translate }}</button></li>
