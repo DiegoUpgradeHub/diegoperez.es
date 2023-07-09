@@ -1,22 +1,22 @@
 <div class="signin-page">
   <form class="form-signin" [formGroup]="signinForm" (ngSubmit)="loginUser()">
-    <h3>Sign in</h3>
+    <h3>{{"Sign in" | translate }}</h3>
     <div class="form-input">
       <label>Email</label>
       <input type="text" class="form-control" formControlName="email" placeholder="Enter email" required>
     </div>
     <div class="form-input">
-      <label>Password</label>
+      <label>{{"Password" | translate }}</label>
       <input type="password" class="form-control" formControlName="password" placeholder="Enter password" required>
     </div>
-    <button type="submit" class="btn btn-success">Sign in</button>
+    <button type="submit" class="btn btn-success">{{"Sign in" | translate }}</button>
 
     <!--bottom form buttons-->
     <button type="button" class="modal-click btn bottom-btn" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
-      Forgot your password? Reset now.
+      {{"Forgot your password? Reset now." | translate}}
     </button>
     <button type="button" class="btn bottom-btn" routerLinkActive="active" routerLink="/sign-up">
-      Don't you have an account yet? Sign up here.
+      {{"Don't you have an account yet? Sign up here." | translate}}
     </button>
   </form>
 </div>
@@ -26,18 +26,18 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content portfolio-modal-box">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="forgotPasswordModalLabel">Did you forgot your password?</h1>
+        <h1 class="modal-title fs-5" id="forgotPasswordModalLabel">{{"Did you forgot your password?" | translate}}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body portfolio-body-box">
-        <p>Place your email to reset password.</p>
+        <p>{{"Place your email to reset password." | translate}}</p>
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" aria-label="Email to reset password" aria-describedby="button-addon2">
-          <button class="btn btn-success" type="button" id="button-addon2" data-bs-dismiss="modal">Send</button>
+          <button class="btn btn-success" type="button" id="button-addon2" data-bs-dismiss="modal">{{"Send" | translate}}</button>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Close" | translate}}</button>
       </div>
     </div>
   </div>

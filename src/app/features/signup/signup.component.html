@@ -1,21 +1,21 @@
 <div class="signup-page">
   <form class="form-signup" [formGroup]="signupForm" (ngSubmit)="registerUser()">
-      <h3>Sign up</h3>
+      <h3>{{"Sign up" | translate}}</h3>
       <div class="form-input">
-          <label>Name</label>
+          <label>{{"Name" | translate}}</label>
           <input type="text" class="form-control" formControlName="name" placeholder="Enter name" required>
       </div>
       <div class="form-input">
-          <label>Email address</label>
+          <label>{{"Email" | translate}}</label>
           <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
       </div>
       <div class="form-input">
-          <label>Password</label>
+          <label>{{"Password" | translate}}</label>
           <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
       </div>
-      <button type="submit" class="btn btn-success">Sign up</button>
+      <button type="submit" class="btn btn-success">{{"Sign up" | translate}}</button>
       <button type="button" class="btn bottom-btn" routerLinkActive="active" routerLink="/sign-in">
-        Do you have an account? Sign in here.
+        {{"Do you have an account? Sign in here." | translate}}
       </button>
   </form>
 </div>

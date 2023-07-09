@@ -68,5 +68,13 @@
     "code": "código",
     "on": "en",
     "My area": "Mi área",
-    "Log out": "Cerrar sesión"
+    "Log out": "Cerrar sesión",
+    "Sign in": "Iniciar sesión",
+    "Password": "Contraseña",
+    "Forgot your password? Reset now.": "¿No recuerdas tu contraseña? Resetéala ahora.",
+    "Don't you have an account yet? Sign up here.": "¿No tienes cuenta? Regístrate aquí.",
+    "Did you forgot your password?": "¿Has olvidado tu contraseña?",
+    "Place your email to reset password.": "Escribe tu email para resetar contraseña.",
+    "Sign up": "Regístrate",
+    "Do you have an account? Sign in here.": "¿Tienes una cuenta? Inicia sesión aquí."
 }
